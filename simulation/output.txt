@@ -1,0 +1,180 @@
+PS C:\Users> python3 tune.py
+Starting tuning across 6 validation seeds (days=2) using 12 parallel workers...
+[EpsSticky] tuning 24 parameter combinations...
+  [EpsSticky] progress: 4/24 combos (7.7s)
+  [EpsSticky] progress: 8/24 combos (8.0s)
+  [EpsSticky] progress: 12/24 combos (8.3s)
+  [EpsSticky] progress: 16/24 combos (10.5s)
+  [EpsSticky] progress: 20/24 combos (10.7s)
+  [EpsSticky] progress: 24/24 combos (10.9s)
+EpsSticky best (0.9376725298992038, {'eps': 0.05, 'alpha': 0.3, 'dwell': 2}) (11s)
+
+[DUCB] tuning 9 parameter combinations...
+  [DUCB] progress: 1/9 combos (2.8s)
+  [DUCB] progress: 2/9 combos (2.8s)
+  [DUCB] progress: 3/9 combos (2.8s)
+  [DUCB] progress: 4/9 combos (2.9s)
+  [DUCB] progress: 5/9 combos (2.9s)
+  [DUCB] progress: 6/9 combos (2.9s)
+  [DUCB] progress: 7/9 combos (2.9s)
+  [DUCB] progress: 8/9 combos (2.9s)
+  [DUCB] progress: 9/9 combos (3.0s)
+DUCB best (0.9151411194343962, {'gamma': 0.995, 'dwell': 2}) (3s)
+
+[SWUCB] tuning 9 parameter combinations...
+  [SWUCB] progress: 1/9 combos (3.0s)
+  [SWUCB] progress: 2/9 combos (3.0s)
+  [SWUCB] progress: 3/9 combos (3.0s)
+  [SWUCB] progress: 4/9 combos (3.0s)
+  [SWUCB] progress: 5/9 combos (3.1s)
+  [SWUCB] progress: 6/9 combos (3.1s)
+  [SWUCB] progress: 7/9 combos (3.1s)
+  [SWUCB] progress: 8/9 combos (3.1s)
+  [SWUCB] progress: 9/9 combos (3.2s)
+SWUCB best (0.9319807424626543, {'tau': 1000, 'dwell': 4}) (3s)
+
+[TSStat] tuning 3 parameter combinations...
+  [TSStat] progress: 1/3 combos (1.4s)
+  [TSStat] progress: 2/3 combos (1.4s)
+  [TSStat] progress: 3/3 combos (1.4s)
+TSStat best (0.927862855900318, {'dwell': 2}) (1s)
+
+[SWTS] tuning 9 parameter combinations...
+  [SWTS] progress: 1/9 combos (2.7s)
+  [SWTS] progress: 2/9 combos (2.8s)
+  [SWTS] progress: 3/9 combos (3.0s)
+  [SWTS] progress: 4/9 combos (3.0s)
+  [SWTS] progress: 5/9 combos (3.1s)
+  [SWTS] progress: 6/9 combos (3.1s)
+  [SWTS] progress: 7/9 combos (3.1s)
+  [SWTS] progress: 8/9 combos (3.2s)
+  [SWTS] progress: 9/9 combos (3.2s)
+SWTS best (0.9229899773180903, {'tau': 1000, 'dwell': 2}) (3s)
+
+[AIZen] tuning 54 parameter combinations...
+  [AIZen] progress: 10/54 combos (24.2s)
+  [AIZen] progress: 20/54 combos (41.9s)
+  [AIZen] progress: 30/54 combos (60.6s)
+  [AIZen] progress: 40/54 combos (81.4s)
+  [AIZen] progress: 50/54 combos (99.8s)
+  [AIZen] progress: 54/54 combos (100.5s)
+AIZen best (0.9297438507722044, {'gamma': 0.998, 'G0': 3.0, 'kappa': 2.0, 'dwell': 2}) (101s)
+
+done
+
+
+PS C:\Users> python3 exp1.py
+seed 0 10s
+seed 1 19s
+seed 2 29s
+seed 3 38s
+seed 4 47s
+seed 5 57s
+seed 6 66s
+seed 7 75s
+seed 8 84s
+seed 9 94s
+seed 10 104s
+seed 11 113s
+seed 12 123s
+seed 13 133s
+seed 14 142s
+seed 15 152s
+seed 16 163s
+seed 17 173s
+seed 18 183s
+seed 19 193s
+seed 20 202s
+seed 21 211s
+seed 22 221s
+seed 23 265s
+seed 24 341s
+seed 25 413s
+seed 26 512s
+seed 27 608s
+seed 28 686s
+seed 29 713s
+done
+
+
+PS C:\Users> python3 exp2.py
+band 0 EpsSticky best (0.898509132128678, {'eps': 0.02, 'alpha': 0.1, 'dwell': 10}) 8s
+band 0 DUCB best (0.8704634356798809, {'gamma': 0.999, 'dwell': 10}) 13s
+band 0 SWUCB best (0.8864120971234458, {'tau': 3000, 'dwell': 10}) 17s
+band 0 TSStat best (0.9066860687932321, {'dwell': 10}) 19s
+band 0 SWTS best (0.8975583696740926, {'tau': 3000, 'dwell': 10}) 25s
+band 0 AIZen best (0.9056050467767096, {'gamma': 0.99, 'G0': 4.0, 'kappa': 8.0, 'dwell': 10}) 59s
+band 0 ACS best (0.869789073862993, {'period_h': 1.0}) 60s
+band 0 done 119s
+band 1 EpsSticky best (0.8916016518397893, {'eps': 0.02, 'alpha': 0.3, 'dwell': 10}) 127s
+band 1 DUCB best (0.8796426675726595, {'gamma': 0.999, 'dwell': 30}) 133s
+band 1 SWUCB best (0.8843039523780437, {'tau': 3000, 'dwell': 30}) 139s
+band 1 TSStat best (0.8947958309649066, {'dwell': 10}) 141s
+band 1 SWTS best (0.8919932330193009, {'tau': 3000, 'dwell': 10}) 147s
+band 1 AIZen best (0.8944897722172129, {'gamma': 0.999, 'G0': 1.0, 'kappa': 8.0, 'dwell': 10}) 210s
+band 1 ACS best (0.8971114393461237, {'period_h': 24.0}) 212s
+band 1 done 399s
+done
+
+
+PS C:\Users> python3 exp3.py
+M 2 12s
+M 4 33s
+M 8 73s
+M 12 207s
+done
+
+
+PS C:\Users> python3 exp4.py
+load_scale 0.5 7s
+load_scale 1.0 14s
+load_scale 2.0 21s
+load_scale 3.0 28s
+load_scale 4.0 35s
+load_scale 6.0 42s
+sigma_sh 2.0 49s
+sigma_sh 4.0 78s
+sigma_sh 8.0 107s
+n24 2.6 135s
+n24 3.0 162s
+n24 3.4 190s
+n_nb 5 212s
+n_nb 10 233s
+n_nb 19 254s
+p_mbb 0.0 270s
+p_mbb 0.5 287s
+p_mbb 0.9 304s
+p_mbb 1.0 323s
+gamma 0.9 340s
+gamma 0.95 358s
+gamma 0.98 375s
+gamma 0.99 394s
+gamma 0.998 410s
+gamma 1.0 426s
+weights balanced (0.60/0.25/0.15) 474s
+weights throughput only 501s
+weights latency-heavy (0.40/0.40/0.20) 531s
+weights equal (1/3 each) 557s
+done
+
+
+PS C:\Users> python3 exp5.py
+a done 25s
+dbbm 0.45 38s
+dbbm 2.0 50s
+dbbm 5.0 63s
+dbbm 10.0 76s
+done 85s
+
+
+PS C:\Users> python3 figs_exp1.py
+figs ok
+
+PS C:\Users> python3 figs_exp3.py
+ok
+
+PS C:\Users> python3 figs_exp4.py
+ok
+{0.0: (0.05, 17.1), 0.5: (0.05, 8.7), 0.9: (0.05, 2.7), 1.0: (0.0, 0.8)}
+
+PS C:\Users> python3 figs_static.py
